@@ -1,0 +1,14 @@
+body {
+	background-color: #d3d3d3;
+	font-family: Georgia;
+}
+
+table {
+	background-color: #ffffff;
+}
+
+#logo {
+	position: fixed;
+	top: 5px;
+	right: 10px;
+}

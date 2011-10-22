@@ -1,0 +1,4 @@
+topic = /topic/fm/cel/c586/c586/09580/image
+
+on this server:
+http://localhost:8890/vis%3ftopic%3dwww.val202.si%2Fip%2Fbangalore%2Ftext

@@ -1,0 +1,25 @@
+### base.html
+<html>
+<head>
+<title>{% block title %}Default title{% end %}</title>
+</head>
+<body>
+<form action="/upload_pic" enctype="multipart/form-data" method="post">
+	{{ xsrf_form_html() }}	
+	<input type="file" name="pic_name"></input>
+	<input type="submit" value="pošlji"></input>
+</form>
+<div id="pict">
+</div>
+<div id="selected_pic">
+</div>
+<ul>
+{% for student in students %}
+{% block studenta %}
+<!-- <li>{{ escape(student) }}</li> -->
+<li>{{student}}</li>
+{% end %}
+{% end %}
+</ul>
+</body>
+</html>

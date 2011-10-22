@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>		
+		
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/themes/base/jquery-ui.css" id="theme">
+		<script type="text/javascript" src="/static/javascript/dns.js"></script>		
+		<link rel="stylesheet" href="/static/css/jquery.fileupload-ui.css">
+		<link rel="stylesheet" href="/static/css/dns.css">		
+		<title>RadioVIS setting</title>
+	</head>
+	<body onload="add_or_change_function({{cnt}})">
+		<center><span id="msgbox"></span></center>
+		<center><h1>Set up radioVIS data</h1></center>
+		<img id="logo" src="/static/images/syndeenation-small.png" />
+		<table border='1'><tr><th>start time</th><th>show name</th><th>show desc</th><th>end time</th><th>picture</th><th>text</th><th>Add/Change</th></tr>	
+			{% for line in outdata %}
+				<tr><td>{{line[0]}}</td><td>{{line[1]}}</td><td>{{line[2]}}</td><td>{{line[3]}}</td><td id='aoc_pic_{{outdata.index(line)}}'></td><td id='aoc_txt_{{outdata.index(line)}}'></td><td id='aoc_{{outdata.index(line)}}'><button type='button' onclick='upload({{outdata.index(line)}})'>Add</button></td></tr>
+			{% end %}
+		</table>
+	</body>
+</html>
